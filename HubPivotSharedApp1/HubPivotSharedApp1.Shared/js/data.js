@@ -13,13 +13,43 @@
         list.push(item);
     });
 
+    //load our data
+    var csvData = new WinJS.Binding.List();
+    var jsonData = {};
+    var url = new Windows.Foundation.Uri("ms-appx:///data/1.json");
+    Windows.Storage.StorageFile.getFileFromApplicationUriAsync(url).then(function (file) {
+        Windows.Storage.FileIO.readTextAsync(file).done(function (text) {
+            Data.jsonData = JSON.parse(text);
+            for (var i = 0; i < jsonData.length; i++) {
+                Data.csvData.push(jsonData[i]);
+            }
+        });
+    });
+
+    function jsonLoad(callback) {
+        var url = new Windows.Foundation.Uri("ms-appx:///data/1.json");
+        Windows.Storage.StorageFile.getFileFromApplicationUriAsync(url).then(function (file) {
+            Windows.Storage.FileIO.readTextAsync(file).done(function (text) {
+                Data.jsonData = JSON.parse(text);
+                for (var i = 0; i < jsonData.length; i++) {
+                    Data.csvData.push(jsonData[i]);
+                }
+                callback();
+            });
+        });
+    }
+
     WinJS.Namespace.define("Data", {
         items: groupedItems,
         groups: groupedItems.groups,
         getItemReference: getItemReference,
         getItemsFromGroup: getItemsFromGroup,
         resolveGroupReference: resolveGroupReference,
-        resolveItemReference: resolveItemReference
+        resolveItemReference: resolveItemReference,
+
+        jsonData: jsonData,
+        csvData: csvData,
+        loadData: jsonLoad
     });
 
     // Получить ссылку на элемент, используя ключ группы и заголовок элемента

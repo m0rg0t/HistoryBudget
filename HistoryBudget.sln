@@ -5,17 +5,17 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedApp", "SharedApp", "{09491CED-070E-46EB-B84A-8D2C38370BCA}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HubPivotSharedApp1.Shared", "HubPivotSharedApp1\HubPivotSharedApp1.Shared\HubPivotSharedApp1.Shared.shproj", "{2E6D3BBE-599B-4820-8AB3-074E4EF12C2A}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HistoryBudget.Shared", "HubPivotSharedApp1\HubPivotSharedApp1.Shared\HistoryBudget.Shared.shproj", "{2E6D3BBE-599B-4820-8AB3-074E4EF12C2A}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "HubPivotSharedApp1.Windows", "HubPivotSharedApp1\HubPivotSharedApp1.Windows\HubPivotSharedApp1.Windows.jsproj", "{C52AF1E2-DF68-462A-9F76-0586030112C3}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "HistoryBudget.Windows", "HubPivotSharedApp1\HubPivotSharedApp1.Windows\HistoryBudget.Windows.jsproj", "{C52AF1E2-DF68-462A-9F76-0586030112C3}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "HubPivotSharedApp1.WindowsPhone", "HubPivotSharedApp1\HubPivotSharedApp1.WindowsPhone\HubPivotSharedApp1.WindowsPhone.jsproj", "{25F1568C-FE78-4DF9-87E5-E5393D1AAB02}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "HistoryBudget.WindowsPhone", "HubPivotSharedApp1\HubPivotSharedApp1.WindowsPhone\HistoryBudget.WindowsPhone.jsproj", "{25F1568C-FE78-4DF9-87E5-E5393D1AAB02}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HubPivotSharedApp1.Shared.projitems*{c52af1e2-df68-462a-9f76-0586030112c3}*SharedItemsImports = 5
-		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HubPivotSharedApp1.Shared.projitems*{25f1568c-fe78-4df9-87e5-e5393d1aab02}*SharedItemsImports = 5
-		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HubPivotSharedApp1.Shared.projitems*{2e6d3bbe-599b-4820-8ab3-074e4ef12c2a}*SharedItemsImports = 13
+		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HistoryBudget.Shared.projitems*{c52af1e2-df68-462a-9f76-0586030112c3}*SharedItemsImports = 5
+		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HistoryBudget.Shared.projitems*{25f1568c-fe78-4df9-87e5-e5393d1aab02}*SharedItemsImports = 5
+		HubPivotSharedApp1\HubPivotSharedApp1.Shared\HistoryBudget.Shared.projitems*{2e6d3bbe-599b-4820-8ab3-074e4ef12c2a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,38 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build" IgnorableNamespaces="build">
-
-  <Identity Name="c52af1e2-df68-462a-9f76-0586030112c3" Version="1.0.0.0" Publisher="CN=m0rg0_001" />
-
+  <Identity Name="43337m0rg0t.253239E8BEF7C" Version="1.1.0.0" Publisher="CN=F7642D27-CCE9-4988-9BED-35B1F14EED65" />
   <Properties>
-    <DisplayName>HubPivotSharedApp1.Windows</DisplayName>
-    <PublisherDisplayName>m0rg0_001</PublisherDisplayName>
+    <DisplayName>Исторический бюджет</DisplayName>
+    <PublisherDisplayName>m0rg0t</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
     <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
     <Application Id="App" StartPage="default.html">
-
-      <m2:VisualElements DisplayName="HubPivotSharedApp1.Windows" Description="HubPivotSharedApp1.Windows" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
-
+      <m2:VisualElements DisplayName="Исторический бюджет" Description="HubPivotSharedApp1.Windows" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
         <m2:SplashScreen Image="images\splashscreen.png" />
-
       </m2:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
-
   <build:Metadata>
     <build:Item Name="Blend" Version="12.0.51020.0" />
   </build:Metadata>
