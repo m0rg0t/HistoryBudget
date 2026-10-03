@@ -19,21 +19,25 @@
     var url = new Windows.Foundation.Uri("ms-appx:///data/1.json");
     Windows.Storage.StorageFile.getFileFromApplicationUriAsync(url).then(function (file) {
         Windows.Storage.FileIO.readTextAsync(file).done(function (text) {
-            Data.jsonData = JSON.parse(text);
-            for (var i = 0; i < jsonData.length; i++) {
-                Data.csvData.push(jsonData[i]);
-            }
+            updateLoadedData(text);
         });
     });
+
+    function updateLoadedData(text) {
+        jsonData = JSON.parse(text);
+        Data.jsonData = jsonData;
+        // Keep the observable list instance, but replace rows on every load.
+        csvData.splice(0, csvData.length);
+        for (var i = 0; i < jsonData.length; i++) {
+            csvData.push(jsonData[i]);
+        }
+    }
 
     function jsonLoad(callback) {
         var url = new Windows.Foundation.Uri("ms-appx:///data/1.json");
         Windows.Storage.StorageFile.getFileFromApplicationUriAsync(url).then(function (file) {
             Windows.Storage.FileIO.readTextAsync(file).done(function (text) {
-                Data.jsonData = JSON.parse(text);
-                for (var i = 0; i < jsonData.length; i++) {
-                    Data.csvData.push(jsonData[i]);
-                }
+                updateLoadedData(text);
                 callback();
             });
         });
